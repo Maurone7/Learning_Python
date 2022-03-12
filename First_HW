@@ -1,0 +1,49 @@
+# EX 1
+
+# Description: With this incomplete list of planets in solar system: 
+# planets = [‘venus’, ‘mercury’, ‘earth’, ‘mars’, ‘jupiter’]  
+# Turn it into a complete and correctly ordered list.
+
+# method 1
+
+planets = ['venus', 'mercury', 'earth', 'mars', 'jupiter']
+planets[0], planets[1] = planets[1], planets[0]
+print(planets)
+planets.extend(['saturn', 'uranus', 'neptune', 'pluto'])
+print(planets)
+
+
+#method2
+
+planets = ['venus', 'mercury', 'earth', 'mars', 'jupiter']
+planets.pop(0)       #or planets.remove('venus')
+print(planets)
+planets.insert(1, 'venus')
+print(planets)
+planets.append('saturn')
+print(planets)
+planets.extend(['uranus', 'neptune', 'pluto'])
+print(planets)
+
+
+
+
+# EX 2
+# Decription: Create and print an empty list then add three new items [a,b,c] to the list, then print the list 
+
+list1 = []
+print(list1)
+list1.extend(['a','b','c'])
+print(list1)
+
+
+
+
+# EX 3
+# Description: Let list1 = [1,2,3, ‘newton’]. Repeat the list1 4 times and find out the length of the list
+
+list1 = [1,2,3,'newton']
+print(list1)
+list1 = list1 * 4
+print(list1)
+print(len(list1))
