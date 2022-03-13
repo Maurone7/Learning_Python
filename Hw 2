@@ -1,0 +1,51 @@
+# EX 1
+# Description: Using input(), write a python program that prompt you to enter any arbitrary 3 numbers, then print out the sum and 
+average based on that numbers
+
+total = 0.0
+number1=float(input("Enter the first number: "))
+number2=float(input("Enter the second number: "))
+number3=float(input("Enter the third number: "))
+total = sum([number1, number2, number3])
+average = total / 3
+print ("The total is: ")
+print (total)
+print ("The average is: ")
+print (average)
+
+
+# EX 2
+# Description: Assuming x = 8, y = 3.  Use math built-in function to compute 𝑥!, 𝑥!, 𝑥, cos 𝑥 + sin(𝑦) (5%)
+NOTE: default angles in math built-in function is radian
+
+import math
+x = 8.0
+y = 3.0
+print('x = ', x, ' y = ', y)
+print('simple example to use factorial function')
+print(x,'! = ', math.factorial(x))
+print('simple example to use power function')
+print(x, ' ** ', y, ' = ',  math.pow(x,y))
+print('simple example to use square-root function')
+print(x, '**0.5', ' = ', math.sqrt(x))
+print('simple example to use trigonometry function')
+print('for ', x, ' degree in angle: ', 'the cosine function gives: ', 
+math.cos(x*math.pi/180.0))
+print('for ', y, ' degree in angle: ', 'the sine function gives: ', 
+math.sin(y*math.pi/180.0))
+print('cos(x) + sin(y) = ', 
+math.cos(x*math.pi/180.0)+math.sin(y*math.pi/180.0))
+#alternatively you can use this for radian conversion
+print('solution use function radian')
+print('cos(x) + sin(y) = ', 
+math.cos(math.radians(x))+math.sin(math.radians(y)))
+
+
+# EX 3
+# Description: Use logarithm function from math library, compute the value for log"8 + ln 𝑒 + log#$1000 + ln(𝜋)
+
+import math
+x = math.log2(8.0) + math.log(math.e) + math.log10(1000.0) + 
+math.log(math.pi)
+print('computed value for in-class question#3: ', x)
+
