@@ -1,0 +1,52 @@
+# EX 1
+# Description: Let’s consider a simple problem to predict dog years/ages following the assumptions: 
+# (Ref: https://pets.webmd.com/dogs/how-to-calculate-your-dogs-age)
+# •A 1-year old dog ~ 15 year-old kid
+# •A 2-year old dog ~ 24-year old adult
+# •Every further dog year corresponds to ~ 4 - 5 human years 
+# Write a python script to calculate dog’ age (approximately) using the criteria of age and weight from the website
+
+age = int(input("Age of the dog: "))
+print("weight = small if <= 20 lbs")
+print("weight = medium if 21-50 lbs")
+print("weight = large if >= 50 lbs")
+weight=input("Weight of the dog: small/medium/large")
+if age < 0:
+print("This can hardly be true!")
+elif age == 1:
+print("about 15 human years")
+elif age == 2:
+print("about 24 human years")
+elif age > 2 and age < 6:
+human = 24 + (age -2)*4
+print("Human years: ", human)
+elif age >= 6 and weight == "small":
+human = 24 + (age -2)*4
+print("Human years: ", human)
+elif age >= 6 and weight == "medium":
+human = int(25 + (age -2)*4.5)
+print("Human years: ", human)
+elif age >= 6 and weight == "large":
+human = 25 + (age -2)*5
+print("Human years: ", human)
+
+
+# EX 2
+# Description: Write a python code to consider this condition for payment when the purchase amount (amount) is:
+# If  amount < 1000, discount = 5%
+# If amount < 5000, discount = 10%
+# Other amount, discount = 20%
+# To make the purchase amount be flexible, use input() function to define any arbitrary purchase amount.
+
+
+amount = int(input("Enter amount: "))
+if amount<1000:
+discount = amount*0.05
+print ("Discount",discount)
+elif amount<5000:
+discount = amount*0.10
+print ("Discount",discount)
+else:
+discount = amount*0.20
+print ("Discount",discount)
+print ("The payment is: ",amount-discount)
