@@ -1,0 +1,44 @@
+# EX 1
+# Description: In general, it is very useful to use “loop” (e.g. for loop) to do a systematic conversion of a set of data points
+# (e.g. convert measured temperatures from Fahrenheit to Kelvin)
+# Pseudocode example:
+# Define a list of data B
+# For A in B:
+# X = A*m + C
+# print(A)
+# Can you following the above example, write a python code to convert the temperature (from Fahrenheit to Kelvin)?
+# temperatures = [99.3, 22.3, 69.5, 150.8, 330.8, 890.9, 77.4, 110.7, 2200.8] 
+
+temperatures = [99.3, 22.3, 69.5, 150.8, 330.8, 890.9, 77.4, 110.7, 
+2200.8]
+for theta in temperatures:
+T = (theta - 32.0)*(5.0/9.0) + 273.15
+print(T)
+print("Conversion complete")
+
+
+# EX 2
+# Description: Use a “while” loop, sum over the number from 1 to 500 
+
+n = 500
+sum = 0
+i = 1
+while i <= n:
+sum = sum + i
+i = i + 1
+print ("Sum of 1 to", str(n), "is", sum)
+
+
+# EX 3
+# Description: Use a “while” loop, calculate the new capital (including the interest gain) after 20 years if the 
+initial capital (K0) is $5000, and the annual interest rate (p) gain is 5%
+
+K = float(input("Starting capital? "))
+p = float(input("Interest rate? "))
+n = int(input("Number of years? "))
+i = 0
+while i < n:
+K +=  K * p / 100.0
+i += 1
+print(i, K)
+print("Capital after " + str(n) + " ys: " + str(K))
