@@ -1,0 +1,38 @@
+# EX 1
+# Description: Write a code to find out whether your birthday/anyone’s birthday (i.e. mmddyy) 
+# appears anywhere in the digits of 𝜋(that contained in pi_thoudsand.txt)
+# Hint: You can treat the numbers in 𝜋as a string, then use “if” loop to find out if the 
+# input birthday match any numbers in the string
+
+filename = 'pi_thoudsand.txt'
+with open(filename) as file_object:
+lines = file_object.readlines()
+pi_string = ''
+for line in lines:
+pi_string += line.strip()
+birthday = input("Please enter your birthday, in the form mmddyy: ")
+if birthday in pi_string:
+  print("Your birthday appears in the first hundred thoudsand digits of pi!")
+else:
+  print("Your birthday does not appear in the first hundred thoudsand digits of pi.")
+
+# EX 2
+# Description: a) Open the “g1small.txt’, using “for ...... in ... loop”  to print out the whole document. 
+# b) From (a), modify your code to obtain single-space output
+
+book = open('g1small.txt')
+for i in book:
+print(i)
+book.close()
+#part2
+book = open('g1small.txt')
+for i in book:
+print(i, end='')
+book.close()
+f = open('DOSSUM1to12.dat', 'r')
+fh = open('week7exe3.txt', 'w')
+line1 = f.readlines()
+fh.writelines(line1[0:3])
+fh.writelines(line1[21:31])
+f.close()
+fh.close()
