@@ -1,0 +1,40 @@
+# EX 1
+# Description: Can you write with your own script,  function = x3    then print the output when x = 1 to 15   
+
+def cube(x):
+return x * x * x
+print("1 to 15 cubed")
+for x in range(1,16):
+print(x, cube(x))
+
+
+# EX 2
+# Description: Write a function, i.e. f(x, y) = x**y + x*y and find the values when x = 2, y = 4; and x = 5, y = 3  
+
+def f(x, y):
+z = x**y + x*y
+return z
+print("Program starts!")
+a = 2
+res1 = f(a, 2+a)
+print("Result of function call:", res1)
+a = 5
+b = 3
+res2 = f(a, b)
+print("Result of function call:", res2)
+
+
+# EX 3
+# Description: Write a function, i.e. convert Celsius to Fahrenheit. Then convert a list of temperature:
+T  = (22.6, 25.8, 27.3, 29.8, 57.5, 0.0).  Then print it out on screen when execute the code.         (8%)
+# Hint: Here to iterate over the list over the T. You might need a “for loop”, i.e. 
+# for t in (values in the list):
+# statement/instruction 
+
+def fahrenheit(T_in_celsius):
+"""return the temperature in degrees Fahrenheit
+by giving degrees in celcius in a list"""
+return (T_in_celsius * 9 / 5) + 32
+print("Celcius  :  Fahrenheit")
+for t in (22.6, 25.8, 27.3, 29.8, 57.5, 0.0):
+print(t, ": ", fahrenheit(t))
